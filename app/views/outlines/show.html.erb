@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @outline.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @outline.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @outline.price %>
+</p>
+
+<%= link_to 'Edit', edit_outline_path(@outline) %> |
+<%= link_to 'Back', outlines_path %>
