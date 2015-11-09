@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :lectures
   devise_for :users
   resources :outlines
+  resources :dashboard
   get 'pages/about'
   get 'pages/contact'
 
