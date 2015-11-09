@@ -15,6 +15,7 @@
   <tbody>
     <% @outlines.each do |outline| %>
       <tr>
+        <td><%= image_tag outline.image.url(:thumb) %></td>
         <td><%= outline.name %></td>
         <td><%= outline.description %></td>
         <td><%= outline.price %></td>

@@ -1,4 +1,4 @@
-<%= form_for(@outline) do |f| %>
+<%= form_for @outline, html: { multipart: true } do |f| %>
   <% if @outline.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@outline.errors.count, "error") %> prohibited this outline from being saved:</h2>
@@ -22,6 +22,10 @@
   <div class="form-group">
     <%= f.label :price %><br>
     <%= f.text_field :price, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
   </div>
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>

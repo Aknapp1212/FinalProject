@@ -1,10 +1,17 @@
-<div class="navbar navbar-default navbarstatic-top">
+<div class="navbar navbar-default navbar-static-top">
   <div class="container">
-    <a href="index.html" class="navbar-brand">TopOutlines</a>
+    <div>
+
+      <a href="/outlines.html" class="navbar-brand"><img class="nav navbar-nav navbar-left logo" style="width: 6.5rem;" src="assets/TopOutlines.png"/></a>
+      </div>
     <div class="navbar nav-tabs">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/pages/about/">About</a></li>
-        <li><a href="/pages/contact/">Contact</a></li>
+        <li><%= link_to "About",pages_about_path %></li>
+        <li><%= link_to "Contact",pages_contact_path %></li>
+        <li><%= link_to "Sign In",new_user_session_path %></li>
+        <li><%= link_to "Sign Up",new_user_registration_path %></li>
+        <li><%= link_to "Sign Out",destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Edit Profile",edit_user_registration_path %></li>
       </ul>
     </div>
   </div>
