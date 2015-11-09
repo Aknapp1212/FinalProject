@@ -21,7 +21,7 @@
         <td><%= outline.price %></td>
         <td><%= link_to 'Show', outline, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_outline_path(outline), class: "btn btn-link" %></td>
-        <td><%= link_to 'Destroy', outline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', outline, class: "btn btn-link", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
