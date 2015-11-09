@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :university %><br />
-    <%= f.select :university_id,[['University of Miami', 1],['University of Florida', 2]] %>
+    <%= f.select :university_id, [options_for_select(User.get_universities)]%>
     <!--options_for_select(User.get_universities)-->
   </div>
   <div class="field">
