@@ -4,6 +4,31 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name%>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name%>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :class_year %><br />
+    <%= f.select :class_year, [['1L', 1],['2L', 2],['3L',3]]%>
+  </div>
+  <div class="field">
+    <%= f.label :university %><br />
+    <%= f.select :university_id,[['University of Miami', 1],['University of Florida', 2]] %>
+    <!--options_for_select(User.get_universities)-->
+  </div>
+  <div class="field">
+    <%= f.label :law_review %><br />
+    <%= f.check_box :law_review%>
+  </div>
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

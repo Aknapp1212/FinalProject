@@ -7,4 +7,14 @@ class User < ActiveRecord::Base
   belongs_to :university
   has_many :outlines
   has_many :lectures
+
+  def self.get_universities
+    collector = []
+    University.find_each do |u|
+      collector << [u.name, u.id]
+    end
+    collector
+  end
+
+
 end
