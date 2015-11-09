@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :universities
+  resources :lectures
   devise_for :users
   resources :outlines
   get 'pages/about'
