@@ -13,6 +13,7 @@
 <div class="container">
 
   <%= yield %>
+<<<<<<< HEAD
 </div>
 <center><% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
@@ -20,7 +21,14 @@
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
   <% end %>
 </center>
+=======
+</div >
+
+<div class="footer">
+
+>>>>>>> 56597fb4a47e6cf4093fb16dbc4a64dbf5e6c4d4
   <p>Copyright 2015</p>
+</div>
 
 </body>
 </html>

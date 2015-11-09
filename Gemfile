@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
+ruby "2.2.3"
 
 
 gem 'rails', '4.2.4'
+<<<<<<< HEAD
+=======
+#gem 'sqlite3'
+>>>>>>> 56597fb4a47e6cf4093fb16dbc4a64dbf5e6c4d4
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -30,7 +35,11 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+<<<<<<< HEAD
   gem 'sqlite3'
+=======
+  gem 'sqlite3',  '~>1.3.11'
+>>>>>>> 56597fb4a47e6cf4093fb16dbc4a64dbf5e6c4d4
 end
 
 group :development do
@@ -41,3 +50,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end

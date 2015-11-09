@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -15,3 +16,33 @@
           </div>
         </div>
       </nav>
+=======
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="navbar header">
+    <button type="button" Class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/outlines.html"><img class="nav navbar-nav navbar-left logo" style="width: 6.5rem;" src="/assets/TopOutlines.png"/>
+    </div>
+
+    <div class="collapse navbar-collapse" id=#"bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "About",pages_about_path %></li>
+        <li><%= link_to "Contact",pages_contact_path %></li>
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to "Edit Profile",edit_user_registration_path %></li>
+            <li><%= link_to "Sign Out",destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up",new_user_registration_path %></li>
+            <li><%= link_to "Sign In",new_user_session_path %></li>
+          <%end%>
+      </ul>
+  </div>
+</nav>
+>>>>>>> 56597fb4a47e6cf4093fb16dbc4a64dbf5e6c4d4
