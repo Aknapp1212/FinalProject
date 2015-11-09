@@ -3,10 +3,13 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  validates :name, presence: true
 
   belongs_to :university
-  has_many :outlines
+  has_many :outlines, dependent: :destroy #not sure about the 'dependend: :destroy part'
   has_many :lectures
+  has_many :sales, class_name: "Order", foreign_key: "seller_id"
+  has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
 
   def self.get_universities
     collector = []
