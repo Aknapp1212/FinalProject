@@ -32,7 +32,10 @@ ActiveRecord::Schema.define(version: 20151109072829) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "outlines", ["user_id"], name: "index_outlines_on_user_id"
 
   create_table "universities", force: :cascade do |t|
     t.string   "name"
