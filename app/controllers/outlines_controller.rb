@@ -4,7 +4,7 @@ class OutlinesController < ApplicationController
   # GET /outlines
   # GET /outlines.json
   def index
-    @outlines = Outline.all
+    @outlines = current_user.outlines
   end
 
   # GET /outlines/1
