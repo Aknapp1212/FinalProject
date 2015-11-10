@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :outlines
   resources :dashboard
   resources :community
+  resources :charges
   get 'pages/about'
   get 'pages/contact'
 
