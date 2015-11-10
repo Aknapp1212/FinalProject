@@ -1,6 +1,6 @@
 class CommunityController < ApplicationController
 
   def index
-    @outlines = Outline.all
+    @outlines = Outline.where.not(id: current_user.id)
   end
 end
