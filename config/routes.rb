@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :orders do
+    resources :outlines
+  end
   resources :universities
   resources :lectures
   devise_for :users

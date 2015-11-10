@@ -4,4 +4,5 @@ class Outline < ActiveRecord::Base
   :dropbox_credentials => Rails.root.join("/config/dropbox.yml")
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   belongs_to :users
+  has_many :orders
 end
