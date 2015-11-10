@@ -11,8 +11,6 @@ class User < ActiveRecord::Base
   has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
 
 
-
-
   def self.get_universities
     collector = []
     University.find_each do |u|
@@ -20,6 +18,8 @@ class User < ActiveRecord::Base
     end
     collector
   end
+
+
 
 
 end

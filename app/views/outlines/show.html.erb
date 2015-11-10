@@ -16,7 +16,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @outline.price %>
+  <%= number_to_currency(@outline.price) %>
 </p>
 
 <%= link_to 'Edit', edit_outline_path(@outline) %> |
