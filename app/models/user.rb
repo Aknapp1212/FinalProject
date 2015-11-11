@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     University.find_each do |u|
       collector << [u.name, u.id]
     end
-    collector
+    collector.unshift('Select University')
   end
 
 
