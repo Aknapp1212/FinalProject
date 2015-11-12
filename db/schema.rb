@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110195846) do
+ActiveRecord::Schema.define(version: 20151111191501) do
 
   create_table "lectures", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "university_name"
   end
 
   add_index "lectures", ["user_id"], name: "index_lectures_on_user_id"
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 20151110195846) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
-    t.integer  "lecture_id"
+    t.string   "lecture_id"
   end
 
   add_index "outlines", ["user_id"], name: "index_outlines_on_user_id"

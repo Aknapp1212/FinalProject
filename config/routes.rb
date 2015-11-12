@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
-  resources :orders do
-    resources :outlines
-  end
+
+  resources :outlines
   resources :universities
   resources :lectures
   devise_for :users
   resources :outlines
   resources :dashboard
   resources :community
+
   resources :charges
   get 'pages/about'
   get 'pages/contact'
 
+ get 'outlines/download_pdf'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

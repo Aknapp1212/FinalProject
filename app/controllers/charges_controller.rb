@@ -1,11 +1,20 @@
 class ChargesController < ApplicationController
 
   def new
+    @outline = Outline.find(params[:outline_id])
   end
 
   def create
+    # p "#{'!'*25}"
+    # p "inside the create"
+    # p "#{'!'*25}"
+    # p "#{'!'*25}"
+    # @charge = Charge.find(params[:id])
+    # if @charge.save
+    #   #do some stuff
+    # end
     # Amount in cents
-    @amount = 500
+    @amount = (params[:id])
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
@@ -26,3 +35,5 @@ class ChargesController < ApplicationController
 
 
 end
+
+

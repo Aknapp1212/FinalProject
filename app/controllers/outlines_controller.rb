@@ -1,5 +1,5 @@
 class OutlinesController < ApplicationController
-  before_action :set_outline, only: [:show, :edit, :update, :destroy]
+  before_action :set_outline, only: [:show,:edit, :update, :destroy]
 
   # GET /outlines
   # GET /outlines.json
@@ -10,6 +10,10 @@ class OutlinesController < ApplicationController
   # GET /outlines/1
   # GET /outlines/1.json
   def show
+    # @pic = Outline.find(params[:id])
+    # if @pic.image_file_name == false
+    #   send_file(Paperclip.io_adapters.for(@pic.image).path, :type => @pic.image_content_type, :disposition => "attachment", :filename => @pic.image_file_name)
+    # end
   end
 
   # GET /outlines/new
@@ -19,6 +23,7 @@ class OutlinesController < ApplicationController
 
   # GET /outlines/1/edit
   def edit
+
   end
 
   # POST /outlines

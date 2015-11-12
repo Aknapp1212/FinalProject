@@ -9,7 +9,7 @@ class Lecture < ActiveRecord::Base
     Lecture.find_each do |u|
       collection << [u.name, u.id]
     end
-    collection
+    collection.unshift('Select Lecture')
   end
 
 end

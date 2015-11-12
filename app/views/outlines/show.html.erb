@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%#= link_to 'Download PDF', outlines_download_pdf_url(@outline) %>
+
+  <%= link_to "Download", @outline.image.url(:original, false) %>
   <%= image_tag @outline.image.url(:medium) %>
+
+
 </p>
 
 <p>
@@ -16,8 +21,16 @@
 
 <p>
   <strong>Price:</strong>
-  <%= number_to_currency(@outline.price) %>
+  <p id='amount' price='<%= @outline.price %>'><%= number_to_currency(@outline.price) %></p>
 </p>
 
-<%= link_to 'Edit', edit_outline_path(@outline) %> |
-<%= link_to 'Back', outlines_path %>
+<div>
+<% if current_user.id != @outline.user_id %>
+  <button id="payment">Buy Outline!</button>
+<% end %>
+
+</div>
+<% if current_user.id == @outline.user_id %>
+  <%= link_to 'Edit', edit_outline_path(@outline) %> |
+  <%= link_to 'Back', outlines_path %>
+<% end %>
