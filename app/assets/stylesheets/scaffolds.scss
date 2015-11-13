@@ -4,6 +4,7 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  opacity:1;
 }
 
 p, ol, ul, td {
@@ -16,7 +17,17 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
+  opacity: .5;
 }
+.well{
+background-opacity: .5;
+
+}
+
+
+/*.text-body{
+z-index: 1000;
+}*/
 
 a {
   color: #000;
