@@ -11,7 +11,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class= ".table-striped">
     <% @universities.each do |university| %>
       <tr>
         <td><%= university.name %></td>
@@ -24,8 +24,11 @@
       </tr>
     <% end %>
   </tbody>
+
 </table>
 
+
 <br>
+
 
 <%= link_to 'New University', new_university_path %>
